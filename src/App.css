@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("/pattern.svg") no-repeat center center/cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+ul li {
+  list-style: none;
+}
+.bg-img {
+  background: url("/dp.png") no-repeat center center/cover;
+  height: 250px;
+  width: 250px;
+}
+.hr {
+  height: 1px;
+  background-color: rgb(37, 31, 31);
+  width: 100px;
+}
+.border-circle {
+  border: 10px outset gray !important;
+}
