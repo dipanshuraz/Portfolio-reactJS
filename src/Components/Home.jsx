@@ -63,12 +63,6 @@ export class Home extends Component {
                 >
                   <i class="far fa-file-alt"></i> Resume
                 </a>
-                <a
-                  className="btn btn-block btn-outline-success bg-success border text-white p-3"
-                  href="https://github.com/dipanshuraz/Portfolio-reactJS/raw/master/public/resume/resumedoc.docx"
-                >
-                  <i class="far fa-file-alt"></i> Resume
-                </a>
               </div>
             </div>
           </div>
