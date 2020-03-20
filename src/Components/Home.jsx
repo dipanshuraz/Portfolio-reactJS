@@ -4,7 +4,7 @@ import GitHubCalendar from "react-github-calendar";
 export class Home extends Component {
   render() {
     return (
-      <div className="container my-5">
+      <div className="container my-5 text-dark">
         <div className="row mt-5">
           <div className="col-md-5 d-flex justify-content-center">
             <div className="bg-img"></div>
@@ -214,7 +214,7 @@ export class Home extends Component {
                       className="border rounded-circle border-circle d-flex justify-content-center align-items-center"
                       style={{ height: "160px", width: "160px" }}
                     >
-                      <h1 class=" font-weight-bold"> 300+</h1>
+                      <h1 class=" font-weight-bold"> 340+</h1>
                     </div>
                     <h4 className="font-weight-bold my-2">Github Commits</h4>
                   </div>

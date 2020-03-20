@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export class Blogs extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container text-dark">
         <div className="row justify-content-center">
           <div className="col-md-12">
             <hr />

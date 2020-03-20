@@ -1,30 +1,39 @@
 import React from "react";
-import Img from "./Img";
 
-function card(props) {
+function card({ data }) {
+  console.log(data);
   return (
-    <div className="col-md-6 my-4">
-      <div className="card border shadow p-3">
-        <img
-          src="https://1.bp.blogspot.com/-1pe4uDLydv8/XGFjhmfkdaI/AAAAAAAABZA/-rbuCxNHxx81xvLomNa7XpJJL8-OPsUsQCLcBGAs/s1600/PUBG%2BMOBILE%2BLITE%2BPNG%2BLOGO%2BBY%2BPausedGamerZ.png"
-          className="img-fluid border"
-          alt=""
-        />
-        <h4>{props.name}</h4>
-        <p className="lead">{props.desc}</p>
+    <div className="col-md-6 my-4 text-dark">
+      <div className="card border shadow p-3 h-100">
+        <img src={data.img} className="img-fluid border" alt="" />
+        <h4 className="text-center my-2">{data.name}</h4>
+        <p className="lead">{data.desc}</p>
         <div className="row">
           <div className="col-md-6">
-            <button className="btn btn-outline-dark btn-block btn-sm">
-              <a href={props.demoLink}>Demo</a>
-            </button>
+            <a
+              className="btn btn-outline-dark btn-block btn-sm"
+              href={data.demoLink}
+            >
+              Demo
+            </a>
           </div>
           <div className="col-md-6">
-            <button className="btn btn-outline-dark btn-block btn-sm">
-              <a href={props.codeLink}>Github Code</a>
-            </button>
+            <a
+              className="btn btn-outline-dark btn-block btn-sm"
+              href={data.codeLink}
+            >
+              Github Code
+            </a>
           </div>
-          <div className="row justify-content-around px-5 py-3">
-            <Img />
+          <div className="d-flex justify-content-center px-5 py-3 w-100">
+            {data.techstack.map(elem => (
+              <img
+                src={elem}
+                width="32px"
+                className="img-fluid mx-2 d-inline-block"
+                alt=""
+              />
+            ))}
           </div>
         </div>
       </div>
