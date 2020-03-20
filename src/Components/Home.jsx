@@ -57,10 +57,12 @@ export class Home extends Component {
               <div className="hr w-100"></div>
 
               <div className="col-md-4 col-sm-6 my-2">
-                <button className="btn btn-block btn-outline-success bg-success border text-white p-3">
-                  <i class="far fa-file-alt"></i>
-                  <span className="lead text-white"> Resume</span>
-                </button>
+                <a
+                  className="btn btn-block btn-outline-success bg-success border text-white p-3"
+                  href="https://github.com/dipanshuraz/Portfolio-reactJS/blob/master/public/resume/resume.pdf"
+                >
+                  <i class="far fa-file-alt"></i> Resume
+                </a>
               </div>
             </div>
           </div>
