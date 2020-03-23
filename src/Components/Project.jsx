@@ -101,8 +101,8 @@ export class Project extends Component {
           desc:
             "Created a Movie Database App using The OMDb API, which is a RESTful web service to obtain movie information",
           img: "/project-demo/mda.png",
-          demoLink: "link",
-          codeLink: "Code",
+          demoLink: "https://moviedbappdemo.netlify.com/",
+          codeLink: "https://github.com/dipanshuraz/MovieDBApp",
           techstack: [
             "/icons/html-5.svg",
             "/icons/css-3.svg",
