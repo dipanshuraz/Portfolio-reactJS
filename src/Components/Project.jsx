@@ -12,8 +12,8 @@ export class Project extends Component {
           desc:
             "Online Appointment booking system or appointment management software that allows to schedule slots according to you and accept online appointments",
           img: "/project-demo/aba.png",
-          demoLink: "#",
-          codeLink: "#",
+          demoLink: "https://appointmentbookingapp.netlify.com/",
+          codeLink: "https://github.com/dipanshuraz/appointment-booking-app-reactJS",
           techstack: [
             "/icons/html-5.svg",
             "/icons/css-3.svg",
