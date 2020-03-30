@@ -22,5 +22,5 @@ ul li {
   width: 100px;
 }
 .border-circle {
-  border: 10px outset gray !important;
+  border: 8px solid navy !important;
 }
