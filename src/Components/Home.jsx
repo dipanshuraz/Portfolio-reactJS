@@ -59,7 +59,7 @@ export class Home extends Component {
               <div className="col-md-4 col-sm-6 my-2">
                 <a
                   className="btn btn-block btn-outline-success bg-success border text-white p-3"
-                  href="https://github.com/dipanshuraz/Portfolio-reactJS/raw/master/public/resume/resume.pdf"
+                  href="https://drive.google.com/file/d/1ixvglOxFTnMz8QeSTAt4TVnbprJ7bF41/view"
                 >
                   <i class="far fa-file-alt"></i> Resume
                 </a>

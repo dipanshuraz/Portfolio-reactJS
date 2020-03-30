@@ -174,8 +174,59 @@ export class Achievements extends Component {
               </div>
               <hr />
             </div>
+            <div className="row my-5">
+              <div className="col-md-8">
+                <h4 className="font-weight-bold">
+                  JavaScript Certificate | GUVI
+                </h4>
+                <p className="lead font-weight-bold">GUVI Geek Network Private Limited.</p>
+                <p className="lead">
+                  Certification number:
+                  <br />
+                  Date :25 03 2020
+                </p>
+                <p className="lead">
+                  Guvi is an IIT-M , IIM-A incubated company located at IITM Research Park Chennai.
+                </p>
+
+                <hr />
+              </div>
+              <div className="col-md-4">
+
+              </div>
+            </div>
+            {/* Button */}
+            <p>
+              <a
+                class="btn btn-primary"
+                data-toggle="collapse"
+                href="#multiCollapseExample6"
+                role="button"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample6"
+              >
+                View Certificates
+              </a>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample6">
+                  <div class="card card-body">
+                    <p className="m-2">Certificate </p>
+                    <img
+                      src="/certs/guvi.jpg"
+                      className="img-fluid w-100 h-100"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
           </div>
+
         </div>
+
       </div>
     );
   }
