@@ -17,7 +17,7 @@ export class Home extends Component {
 
           <div className="col-md-6 d-flex justify-content-center align-items-center px-4">
             <div className="row text-center">
-              <h1 className="display-4 font-weight-bold p-2">
+              <h1 className="display-4 font-weight-bold p-1">
                 Deepanshu Prajapati
               </h1>
               <div className="hr w-100"></div>
@@ -25,18 +25,20 @@ export class Home extends Component {
                 <span className="text-danger">Front</span>-End Engineer
               </h1>
               <div className="hr w-100"></div>
-              <div className="col-md-6 my-2 d-flex justify-content-around ">
-                <a href="https://github.com/dipanshuraz">
+              <div className="col-md-6 my-2 d-flex justify-content-around w-100">
+
+                <a className='px-md-2' href="https://github.com/dipanshuraz">
                   <i class="fa-3x fab fa-github text-dark"></i>
                 </a>
 
-                <a href="https://linkedin.com/in/deepanshu-prajapati-0b7472148">
+                <a className='px-md-2' href="https://linkedin.com/in/deepanshu-prajapati-0b7472148">
                   <i class=" fa-3x fab fa-linkedin-in "></i>
                 </a>
 
-                <a href="https://hackerrank.com/dipanshuraz2">
+                <a className='px-md-2' href="https://hackerrank.com/dipanshuraz2">
                   <i class="fa-3x fab fa-hackerrank text-success"></i>
                 </a>
+
               </div>
               <div className="hr w-100"></div>
 
@@ -61,9 +63,9 @@ export class Home extends Component {
 
               <div className="hr w-100"></div>
 
-              <div className="col-md-4 col-sm-6 my-2">
+              <div className="col-md-12 col-lg-4 my-2 py-md-3 w-100">
                 <a
-                  className="btn btn-block btn-outline-success bg-success border text-white p-3"
+                  className="btn btn-block btn-outline-success bg-success border text-white p-3 w-100"
                   href="https://drive.google.com/file/d/1ixvglOxFTnMz8QeSTAt4TVnbprJ7bF41/view"
                 >
                   <i class="far fa-file-alt"></i> Resume

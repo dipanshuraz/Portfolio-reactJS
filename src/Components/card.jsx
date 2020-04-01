@@ -25,7 +25,7 @@ function card({ data }) {
               Github Code
             </a>
           </div>
-          <div className="d-flex justify-content-center px-5 py-3 w-100">
+          <div className="d-flex justify-content-center px-5 py-3 w-100 flex-wrap">
             {data.techstack.map(elem => (
               <img
                 src={elem}
