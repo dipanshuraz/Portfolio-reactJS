@@ -148,6 +148,10 @@ export class Project extends Component {
     };
   }
 
+  componentDidMount() {
+    document.title = "Deepanshu | Projects";
+  }
+
   render() {
     return (
       <>

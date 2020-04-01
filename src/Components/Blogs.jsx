@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 export class Blogs extends Component {
+  componentDidMount() {
+    document.title = "Deepanshu | Blogs";
+  }
   render() {
     return (
       <div className="container text-dark">
