@@ -8,6 +8,20 @@ export class Project extends Component {
     this.state = {
       data: [
         {
+          name: "Movie Ticket Booking app",
+          desc:
+            "Designed and developed a ticketing system. The system should allow user to select movies from a list. Allow them to select seats. Filter the movies by genre and language.",
+          img: "/project-demo/ticket.png",
+          demoLink: "https://ticket-system-thinkify.netlify.com/",
+          codeLink: "https://github.com/dipanshuraz/ticketing-system",
+          techstack: [
+            "/icons/html-5.svg",
+            "/icons/css-3.svg",
+            "/icons/bootstrap.svg",
+            "/icons/javascript.svg",
+          ]
+        },
+        {
           name: "Appointment booking app",
           desc:
             "Online Appointment booking system or appointment management software that allows to schedule slots according to you and accept online appointments",
