@@ -1,12 +1,31 @@
 import React, { Component } from "react";
 import Card from "./card";
+import { Link, Route } from 'react-router-dom'
 
 export class Project extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+
       data: [
+        {
+          name: "Truck Tracking System with Realtime API",
+          desc:
+            "Truck Tracking System with Realtime API from mystral and have featurs like Filtering and Searching. Used Google Maps in React & Used Ant Design for UI Framework.",
+          img: "/project-demo/truck.png",
+          demoLink: "https://trucktrackingapp.netlify.com/",
+          codeLink: "https://github.com/dipanshuraz/TruckTrackingApp",
+          techstack: [
+            "/icons/html-5.svg",
+            "/icons/css-3.svg",
+            "/icons/javascript.svg",
+            "/icons/react.svg",
+            "/icons/redux.svg",
+            "/icons/mapsdk.png",
+            "/icons/antd.png",
+          ]
+        },
         {
           name: "Movie Ticket Booking app",
           desc:
@@ -178,6 +197,7 @@ export class Project extends Component {
               return <Card data={elem} />;
             })}
           </div>
+
         </div>
       </>
     );
