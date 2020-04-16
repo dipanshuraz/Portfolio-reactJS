@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Card from "./card";
-import { Link, Route } from 'react-router-dom'
 
 export class Project extends Component {
   constructor(props) {
@@ -197,7 +196,6 @@ export class Project extends Component {
               return <Card data={elem} />;
             })}
           </div>
-
         </div>
       </>
     );
