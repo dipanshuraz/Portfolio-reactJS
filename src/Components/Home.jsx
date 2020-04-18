@@ -223,7 +223,7 @@ export class Home extends Component {
                       className="border rounded-circle border-circle d-flex justify-content-center align-items-center"
                       style={{ height: "160px", width: "160px" }}
                     >
-                      <h1 class=" font-weight-bold"> 400+</h1>
+                      <h1 class=" font-weight-bold"> 450+</h1>
                     </div>
                     <h4 className="font-weight-bold my-2">Github Commits</h4>
                   </div>
