@@ -226,6 +226,74 @@ export class Achievements extends Component {
               </div>
               <hr />
             </div>
+            <div className="row my-5">
+              <div className="col-md-4">
+                <img
+                  src="/logo/udacity.png"
+                  className="img-fluid my-5"
+                  alt=""
+                />
+              </div>
+              <div className="col-md-8">
+                <h4 className="font-weight-bold">
+                  Front End Web Developer Nanodegree Program (nd0011) | Udacity
+                </h4>
+                <p className="lead font-weight-bold">Udacity, Inc.</p>
+                <p className="lead">
+                  Certification number: https://confirm.udacity.com/ADJG3PHJ
+                  <br />
+                  Date :19 04 2020
+                </p>
+                <p className="lead">
+                  <blockquote>
+                    The goal of the Front End Web Developer Nanodegree program is to equip learners with the unique skills they need to build and develop a variety of websites and applications.
+                  </blockquote>
+
+                  1. CSS & Website Layout <br />
+                  2. JavaScript and the DOM <br />
+                  3. Web APIs and Asynchronous Applications <br />
+                  4. Build Tools, Webpack, and Service Worker
+                </p>
+
+                <hr />
+              </div>
+
+            </div>
+            {/* Button */}
+            <p>
+              <a
+                class="btn btn-primary"
+                data-toggle="collapse"
+                href="#multiCollapseExample7"
+                role="button"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample7"
+              >
+                View Certificates
+              </a>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample7">
+                  <div class="card card-body">
+                    <p className="m-2">  <a
+                      className="btn btn-success"
+                      href="https://confirm.udacity.com/ADJG3PHJ"
+                    >
+                      Verify
+                      </a> Certificate Now</p>
+
+
+                    <img
+                      src="/certs/fend.jpg"
+                      className="img-fluid w-100 h-100"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
           </div>
 
         </div>
