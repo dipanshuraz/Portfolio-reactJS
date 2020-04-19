@@ -184,7 +184,7 @@ export class Achievements extends Component {
                 </h4>
                 <p className="lead font-weight-bold">GUVI Geek Network Private Limited.</p>
                 <p className="lead">
-                  Certification number:
+                  Certification number: t3l59VkK2m319B5189
                   <br />
                   Date :25 03 2020
                 </p>
@@ -199,6 +199,7 @@ export class Achievements extends Component {
               </div>
             </div>
             {/* Button */}
+
             <p>
               <a
                 class="btn btn-primary"
@@ -210,12 +211,20 @@ export class Achievements extends Component {
               >
                 View Certificates
               </a>
+
+
             </p>
             <div class="row">
               <div class="col">
                 <div class="collapse multi-collapse" id="multiCollapseExample6">
                   <div class="card card-body">
-                    <p className="m-2">Certificate </p>
+                    <p className="m-2">  <a
+                      className="btn btn-success"
+                      href="https://www.guvi.in/certificate?id=t3l59VkK2m319B5189"
+                    >
+                      Verify
+                      </a> Certificate Now</p>
+
                     <img
                       src="/certs/guvi.jpg"
                       className="img-fluid w-100 h-100"
