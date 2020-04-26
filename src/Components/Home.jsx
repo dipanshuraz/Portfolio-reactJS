@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import GitHubCalendar from "react-github-calendar";
 
 export class Home extends Component {
-
   componentDidMount() {
     document.title = "Deepanshu | Home";
   }
@@ -26,19 +25,23 @@ export class Home extends Component {
               </h1>
               <div className="hr w-100"></div>
               <div className="col-md-6 my-2 d-flex justify-content-around w-100">
-
-                <a className='px-md-2' href="https://github.com/dipanshuraz">
+                <a className="px-md-2" href="https://github.com/dipanshuraz">
                   <i class="fa-3x fab fa-github text-dark"></i>
                 </a>
 
-                <a className='px-md-2' href="https://linkedin.com/in/deepanshu-prajapati-0b7472148">
+                <a
+                  className="px-md-2"
+                  href="https://linkedin.com/in/deepanshu-prajapati-0b7472148"
+                >
                   <i class=" fa-3x fab fa-linkedin-in "></i>
                 </a>
 
-                <a className='px-md-2' href="https://hackerrank.com/dipanshuraz2">
+                <a
+                  className="px-md-2"
+                  href="https://hackerrank.com/dipanshuraz2"
+                >
                   <i class="fa-3x fab fa-hackerrank text-success"></i>
                 </a>
-
               </div>
               <div className="hr w-100"></div>
 
@@ -223,7 +226,7 @@ export class Home extends Component {
                       className="border rounded-circle border-circle d-flex justify-content-center align-items-center"
                       style={{ height: "160px", width: "160px" }}
                     >
-                      <h1 class=" font-weight-bold"> 450+</h1>
+                      <h1 class=" font-weight-bold"> 500+</h1>
                     </div>
                     <h4 className="font-weight-bold my-2">Github Commits</h4>
                   </div>
