@@ -1,202 +1,219 @@
-import React, { Component } from "react";
-import Card from "./card";
+import React, { Component } from 'react';
+import Card from './card';
 
 export class Project extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-
       data: [
         {
-          name: "Employee Management System",
+          name: 'Banks Search Application - kukuFM',
           desc:
-            "Employee Management System is a mini project created using ReactJs and have features like create & delete with custom modal and tables.",
-          img: "/project-demo/emp2.png",
-          demoLink: "https://elegant-elion-24e194.netlify.app/",
-          codeLink: "https://github.com/dipanshuraz/saarthi.ai_assessment_front-end",
+            'There should be a dropdown for cities (just put in 5 cities in there) and there is a search bar. As I type in the search area, the table should be dynamically filtered (client-side filtering). Search should be across all fields.',
+          img: '/project-demo/kuku.png',
+          demoLink: 'https://amazing-minsky-53cfda.netlify.app/',
+          codeLink:
+            'https://github.com/dipanshuraz/sm_106_deepanshu_masai-frontend-course-submissions',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/javascript.svg",
-            "/icons/react.svg",
-            "/icons/redux.svg",
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+            '/icons/redux.svg',
+          ],
         },
         {
-          name: "Truck Tracking System with Realtime API",
+          name: 'Employee Management System',
           desc:
-            "Truck Tracking System with Realtime API from mystral and have featurs like Filtering and Searching. Used Google Maps in React & Used Ant Design for UI Framework.",
-          img: "/project-demo/truck.png",
-          demoLink: "https://trucktrackingapp.netlify.com/",
-          codeLink: "https://github.com/dipanshuraz/TruckTrackingApp",
+            'Employee Management System is a mini project created using ReactJs and have features like create & delete with custom modal and tables.',
+          img: '/project-demo/emp2.png',
+          demoLink: 'https://elegant-elion-24e194.netlify.app/',
+          codeLink:
+            'https://github.com/dipanshuraz/saarthi.ai_assessment_front-end',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/javascript.svg",
-            "/icons/react.svg",
-            "/icons/redux.svg",
-            "/icons/mapsdk.png",
-            "/icons/antd.png",
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+            '/icons/redux.svg',
+          ],
         },
         {
-          name: "Movie Ticket Booking app",
+          name: 'Truck Tracking System with Realtime API',
           desc:
-            "Designed and developed a ticketing system. The system should allow user to select movies from a list. Allow them to select seats. Filter the movies by genre and language.",
-          img: "/project-demo/ticket.png",
-          demoLink: "https://ticket-system-thinkify.netlify.com/",
-          codeLink: "https://github.com/dipanshuraz/ticketing-system",
+            'Truck Tracking System with Realtime API from mystral and have featurs like Filtering and Searching. Used Google Maps in React & Used Ant Design for UI Framework.',
+          img: '/project-demo/truck.png',
+          demoLink: 'https://trucktrackingapp.netlify.com/',
+          codeLink: 'https://github.com/dipanshuraz/TruckTrackingApp',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/bootstrap.svg",
-            "/icons/javascript.svg",
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+            '/icons/redux.svg',
+            '/icons/mapsdk.png',
+            '/icons/antd.png',
+          ],
         },
         {
-          name: "Appointment booking app",
+          name: 'Movie Ticket Booking app',
           desc:
-            "Online Appointment booking system or appointment management software that allows to schedule slots according to you and accept online appointments",
-          img: "/project-demo/aba.png",
-          demoLink: "https://appointmentbookingapp.netlify.com/",
-          codeLink: "https://github.com/dipanshuraz/appointment-booking-app-reactJS",
+            'Designed and developed a ticketing system. The system should allow user to select movies from a list. Allow them to select seats. Filter the movies by genre and language.',
+          img: '/project-demo/ticket.png',
+          demoLink: 'https://ticket-system-thinkify.netlify.com/',
+          codeLink: 'https://github.com/dipanshuraz/ticketing-system',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/bootstrap.svg",
-            "/icons/javascript.svg",
-            "/icons/react.svg",
-            "/icons/redux.svg",
-            "/icons/firebase.svg",
-            "/icons/figma.svg"
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/bootstrap.svg',
+            '/icons/javascript.svg',
+          ],
         },
         {
-          name: "ShopKart App",
-          desc: "Online E-commerce webiste for trending fashion lovers",
-          img: "/project-demo/shopkart.png",
-          demoLink: "https://shopkartdemo.netlify.com/",
-          codeLink: "https://github.com/dipanshuraz/shopKart",
-          techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/javascript.svg",
-            "/icons/react.svg"
-          ]
-        },
-        {
-          name: "To Do App",
+          name: 'Appointment booking app',
           desc:
-            "To do App is a great app with a straightforward and easy-to-use interface that enables quick and simple task management",
-          demoLink: "https://todoappredux.netlify.com",
-          codeLink: "https://github.com/dipanshuraz/To-Do-App",
-          img: "/project-demo/todo.png",
+            'Online Appointment booking system or appointment management software that allows to schedule slots according to you and accept online appointments',
+          img: '/project-demo/aba.png',
+          demoLink: 'https://appointmentbookingapp.netlify.com/',
+          codeLink:
+            'https://github.com/dipanshuraz/appointment-booking-app-reactJS',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/javascript.svg",
-            "/icons/react.svg",
-            "/icons/redux.svg"
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/bootstrap.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+            '/icons/redux.svg',
+            '/icons/firebase.svg',
+            '/icons/figma.svg',
+          ],
         },
         {
-          name: "Deepanshu - portfolio",
-          desc: "I have Created my own porfolio using React JS",
-          demoLink: "https://codersadhu.tech/",
-          img: "/project-demo/portfolio.png",
-          codeLink: "https://github.com/dipanshuraz/Portfolio-reactJS",
+          name: 'ShopKart App',
+          desc: 'Online E-commerce webiste for trending fashion lovers',
+          img: '/project-demo/shopkart.png',
+          demoLink: 'https://shopkartdemo.netlify.com/',
+          codeLink: 'https://github.com/dipanshuraz/shopKart',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/bootstrap.svg",
-            "/icons/javascript.svg",
-            "/icons/react.svg"
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+          ],
         },
         {
-          name: "Slack Landing Page clone",
-          img: "/project-demo/slc.png",
-          desc: "My First React App, A try to Clone Slack Landing Page",
-          demoLink: "https://slacklandingpageclone.netlify.com/",
+          name: 'To Do App',
+          desc:
+            'To do App is a great app with a straightforward and easy-to-use interface that enables quick and simple task management',
+          demoLink: 'https://todoappredux.netlify.com',
+          codeLink: 'https://github.com/dipanshuraz/To-Do-App',
+          img: '/project-demo/todo.png',
+          techstack: [
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+            '/icons/redux.svg',
+          ],
+        },
+        {
+          name: 'Deepanshu - portfolio',
+          desc: 'I have Created my own porfolio using React JS',
+          demoLink: 'https://codersadhu.tech/',
+          img: '/project-demo/portfolio.png',
+          codeLink: 'https://github.com/dipanshuraz/Portfolio-reactJS',
+          techstack: [
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/bootstrap.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+          ],
+        },
+        {
+          name: 'Slack Landing Page clone',
+          img: '/project-demo/slc.png',
+          desc: 'My First React App, A try to Clone Slack Landing Page',
+          demoLink: 'https://slacklandingpageclone.netlify.com/',
 
-          codeLink: "https://github.com/dipanshuraz/SlackLandingPageClone",
+          codeLink: 'https://github.com/dipanshuraz/SlackLandingPageClone',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/bootstrap.svg",
-            "/icons/javascript.svg",
-            "/icons/react.svg"
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/bootstrap.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+          ],
         },
         {
-          name: "Currency Converter React JS",
+          name: 'Currency Converter React JS',
           desc:
             "Currency Converter is the simplest, most beautiful currency converter App you'll ever find. It supports over 150 different currencies from all around the world, ranging from the US Dollar to the Colombian Peso!",
-          img: "/project-demo/cc.png",
-          demoLink: "https://currencyconverterreactjs.netlify.com/",
-          codeLink: "https://github.com/dipanshuraz/Currency-Converter-ReactJS",
+          img: '/project-demo/cc.png',
+          demoLink: 'https://currencyconverterreactjs.netlify.com/',
+          codeLink: 'https://github.com/dipanshuraz/Currency-Converter-ReactJS',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/javascript.svg",
-            "/icons/react.svg"
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+          ],
         },
         {
-          name: "Movie DB App",
+          name: 'Movie DB App',
           desc:
-            "Created a Movie Database App using The OMDb API, which is a RESTful web service to obtain movie information",
-          img: "/project-demo/mda.png",
-          demoLink: "https://moviedbappdemo.netlify.com/",
-          codeLink: "https://github.com/dipanshuraz/MovieDBApp",
+            'Created a Movie Database App using The OMDb API, which is a RESTful web service to obtain movie information',
+          img: '/project-demo/mda.png',
+          demoLink: 'https://moviedbappdemo.netlify.com/',
+          codeLink: 'https://github.com/dipanshuraz/MovieDBApp',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/javascript.svg"
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+          ],
         },
         {
-          name: "Currency Converter JS",
+          name: 'Currency Converter JS',
           desc:
             "Currency Converter is the simplest, most beautiful currency converter App you'll ever find. It supports over 150 different currencies from all around the world, ranging from the US Dollar to the Colombian Peso!",
-          img: "/project-demo/cc.png",
-          demoLink: "https://currencyconverterjs.netlify.com/",
-          codeLink: "https://github.com/dipanshuraz/CurrencyConverterJS",
+          img: '/project-demo/cc.png',
+          demoLink: 'https://currencyconverterjs.netlify.com/',
+          codeLink: 'https://github.com/dipanshuraz/CurrencyConverterJS',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/javascript.svg"
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+          ],
         },
         {
-          name: "Chess UI",
-          desc: "Creative Design for Web Chess UI",
-          demoLink: "https://chessui.netlify.com/",
-          img: "/project-demo/chess.png",
-          codeLink: "https://github.com/dipanshuraz/ChessUI",
+          name: 'Chess UI',
+          desc: 'Creative Design for Web Chess UI',
+          demoLink: 'https://chessui.netlify.com/',
+          img: '/project-demo/chess.png',
+          codeLink: 'https://github.com/dipanshuraz/ChessUI',
           techstack: [
-            "/icons/html-5.svg",
-            "/icons/css-3.svg",
-            "/icons/javascript.svg"
-          ]
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+          ],
         },
 
         {
-          name: "Windows History App",
+          name: 'Windows History App',
           desc:
-            "A Creative Wiki for Microsoft Windows History & their releases created in pure Html & Css",
-          demoLink: "https://windowshistoryweb.netlify.com/",
-          img: "/project-demo/wbh.png",
-          codeLink: "https://github.com/dipanshuraz/WindowsHistoryWeb",
-          techstack: ["/icons/html-5.svg", "/icons/css-3.svg"]
-        }
-      ]
+            'A Creative Wiki for Microsoft Windows History & their releases created in pure Html & Css',
+          demoLink: 'https://windowshistoryweb.netlify.com/',
+          img: '/project-demo/wbh.png',
+          codeLink: 'https://github.com/dipanshuraz/WindowsHistoryWeb',
+          techstack: ['/icons/html-5.svg', '/icons/css-3.svg'],
+        },
+      ],
     };
   }
 
   componentDidMount() {
-    document.title = "Deepanshu | Projects";
+    document.title = 'Deepanshu | Projects';
   }
 
   render() {
@@ -207,7 +224,7 @@ export class Project extends Component {
           <h2 className="font-weight-bold"># Projects</h2>
           <hr />
           <div className="row">
-            {this.state.data.map(elem => {
+            {this.state.data.map((elem) => {
               return <Card data={elem} />;
             })}
           </div>
