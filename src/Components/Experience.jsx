@@ -15,6 +15,40 @@ export class Achievements extends Component {
             <div className="row my-5">
               <div className="col-md-8">
                 <h4 className="font-weight-bold">
+                  <h6 className="font-weight-bold">Jul 2020 - Present</h6>
+                  <code>&gt;</code> Software Developer
+                </h4>
+
+                <p className="lead font-weight-bold">
+                  Edstem Technologies
+                  <br />
+                  Kochi , Kerala (Remote)
+                </p>
+
+                <p className="lead "></p>
+              </div>
+            </div>
+            <div className="row my-5">
+              <div className="col-md-8">
+                <h4 className="font-weight-bold">
+                  <h6 className="font-weight-bold">May 2020 - Present</h6>
+                  <code>&gt;</code> Technical Mentor
+                </h4>
+
+                <p className="lead font-weight-bold">
+                  Masai School <br />
+                  Remote
+                </p>
+
+                <p className="lead ">
+                  Helping students to get industry-level skills and guiding them
+                  on the interview process.
+                </p>
+              </div>
+            </div>
+            <div className="row my-5">
+              <div className="col-md-8">
+                <h4 className="font-weight-bold">
                   <h6 className="font-weight-bold">May 2020 - July 2020</h6>
                   <code>&gt;</code> Frontend Developer (Intern)
                 </h4>

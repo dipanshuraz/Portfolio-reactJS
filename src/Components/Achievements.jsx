@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export class Achievements extends Component {
   componentDidMount() {
-    document.title = "Deepanshu | Achievements";
+    document.title = 'Deepanshu | Achievements';
   }
   render() {
     return (
@@ -182,21 +182,22 @@ export class Achievements extends Component {
                 <h4 className="font-weight-bold">
                   JavaScript Certificate | GUVI
                 </h4>
-                <p className="lead font-weight-bold">GUVI Geek Network Private Limited.</p>
+                <p className="lead font-weight-bold">
+                  GUVI Geek Network Private Limited.
+                </p>
                 <p className="lead">
                   Certification number: t3l59VkK2m319B5189
                   <br />
                   Date :25 03 2020
                 </p>
                 <p className="lead">
-                  Guvi is an IIT-M , IIM-A incubated company located at IITM Research Park Chennai.
+                  Guvi is an IIT-M , IIM-A incubated company located at IITM
+                  Research Park Chennai.
                 </p>
 
                 <hr />
               </div>
-              <div className="col-md-4">
-
-              </div>
+              <div className="col-md-4"></div>
             </div>
             {/* Button */}
 
@@ -211,19 +212,21 @@ export class Achievements extends Component {
               >
                 View Certificates
               </a>
-
-
             </p>
             <div class="row">
               <div class="col">
                 <div class="collapse multi-collapse" id="multiCollapseExample6">
                   <div class="card card-body">
-                    <p className="m-2">  <a
-                      className="btn btn-success"
-                      href="https://www.guvi.in/certificate?id=t3l59VkK2m319B5189"
-                    >
-                      Verify
-                      </a> Certificate Now</p>
+                    <p className="m-2">
+                      {' '}
+                      <a
+                        className="btn btn-success"
+                        href="https://www.guvi.in/certificate?id=t3l59VkK2m319B5189"
+                      >
+                        Verify
+                      </a>{' '}
+                      Certificate Now
+                    </p>
 
                     <img
                       src="/certs/guvi.jpg"
@@ -255,9 +258,10 @@ export class Achievements extends Component {
                 </p>
                 <p className="lead">
                   <blockquote>
-                    The goal of the Front End Web Developer Nanodegree program is to equip learners with the unique skills they need to build and develop a variety of websites and applications.
+                    The goal of the Front End Web Developer Nanodegree program
+                    is to equip learners with the unique skills they need to
+                    build and develop a variety of websites and applications.
                   </blockquote>
-
                   1. CSS & Website Layout <br />
                   2. JavaScript and the DOM <br />
                   3. Web APIs and Asynchronous Applications <br />
@@ -266,7 +270,6 @@ export class Achievements extends Component {
 
                 <hr />
               </div>
-
             </div>
             {/* Button */}
             <p>
@@ -285,13 +288,16 @@ export class Achievements extends Component {
               <div class="col">
                 <div class="collapse multi-collapse" id="multiCollapseExample7">
                   <div class="card card-body">
-                    <p className="m-2">  <a
-                      className="btn btn-success"
-                      href="https://confirm.udacity.com/ADJG3PHJ"
-                    >
-                      Verify
-                      </a> Certificate Now</p>
-
+                    <p className="m-2">
+                      {' '}
+                      <a
+                        className="btn btn-success"
+                        href="https://confirm.udacity.com/ADJG3PHJ"
+                      >
+                        Verify
+                      </a>{' '}
+                      Certificate Now
+                    </p>
 
                     <img
                       src="/certs/fend.jpg"
@@ -304,9 +310,7 @@ export class Achievements extends Component {
               <hr />
             </div>
           </div>
-
         </div>
-
       </div>
     );
   }

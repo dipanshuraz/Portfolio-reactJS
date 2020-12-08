@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import GitHubCalendar from "react-github-calendar";
+import React, { Component } from 'react';
+import GitHubCalendar from 'react-github-calendar';
 
 export class Home extends Component {
   componentDidMount() {
-    document.title = "Deepanshu | Home";
+    document.title = 'Deepanshu | Home';
   }
 
   render() {
@@ -21,7 +21,7 @@ export class Home extends Component {
               </h1>
               <div className="hr w-100"></div>
               <h1 className="font-weight-bold p-2">
-                <span className="text-danger">Front</span>-End Engineer
+                <span className="text-danger">Full</span>-Stack Engineer
               </h1>
               <div className="hr w-100"></div>
               <div className="col-md-6 my-2 d-flex justify-content-around w-100">
@@ -31,7 +31,7 @@ export class Home extends Component {
 
                 <a
                   className="px-md-2"
-                  href="https://linkedin.com/in/deepanshu-prajapati-0b7472148"
+                  href="https://www.linkedin.com/in/codersadhu/"
                 >
                   <i class=" fa-3x fab fa-linkedin-in "></i>
                 </a>
@@ -60,7 +60,7 @@ export class Home extends Component {
                   </a>
                 </p>
                 <p className="lead font-weight-bold">
-                  <i class="fas fa-map-marker-alt"></i> Patna , India
+                  <i class="fas fa-map-marker-alt"></i> Kanpur , India
                 </p>
               </div>
 
@@ -69,7 +69,7 @@ export class Home extends Component {
               <div className="col-md-12 col-lg-4 my-2 py-md-3 w-100">
                 <a
                   className="btn btn-block btn-outline-success bg-success border text-white p-3 w-100"
-                  href="https://drive.google.com/file/d/1ixvglOxFTnMz8QeSTAt4TVnbprJ7bF41/view"
+                  href="https://drive.google.com/file/d/1O_oKqWY35R9RocwDQDxrUVpVsY2MUjpg/view?usp=sharing"
                 >
                   <i class="far fa-file-alt"></i> Resume
                 </a>
@@ -82,10 +82,11 @@ export class Home extends Component {
             <div className="row justify-content-center">
               <div className="col-md-10">
                 <p className="font-weight-bold lead">
-                  An aspiring Full Stack Web Developer, molded and shaped by
-                  Masai School's intensive training program. I want to work in
-                  such a way that can inspire others and lead to the growth of
-                  mine as well as the organisation I will work with.
+                  I am a Full Stack developer with industry experience building
+                  websites and web applications. I specialize in JavaScript and
+                  have professional experience working with ReactJS & NodeJs. I
+                  also have experience working with NextJs. Take a look at my
+                  work or get in touch!
                 </p>
                 <hr />
                 <h2 className="font-weight-bold">Tech Stack</h2>
@@ -135,6 +136,24 @@ export class Home extends Component {
                     className="img-fluid p-3"
                     alt=""
                   />
+                  <img
+                    src="/icons/nodejs-icon.svg"
+                    width="120px"
+                    className="img-fluid p-3"
+                    alt=""
+                  />
+                  <img
+                    src="/icons/express.svg"
+                    width="120px"
+                    className="img-fluid p-3"
+                    alt=""
+                  />
+                  <img
+                    src="/icons/mongodb.svg"
+                    width="120px"
+                    className="img-fluid p-3"
+                    alt=""
+                  />
                 </div>
                 <hr />
                 <h2 className="font-weight-bold">Proficiency</h2>
@@ -159,8 +178,19 @@ export class Home extends Component {
                       alt=""
                     />
                     <p className="lead font-weight-bold">
-                      <span className="text-primary">Data Structure</span> &{" "}
+                      <span className="text-primary">Data Structure</span> &{' '}
                       <span className="text-dark"> Algo</span>
+                    </p>
+                  </div>
+                  <div className="">
+                    <img
+                      src="/icons/back.png"
+                      width="160px"
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <p className="lead font-weight-bold">
+                      <span className="text-info">Backend</span>
                     </p>
                   </div>
                 </div>
@@ -198,6 +228,12 @@ export class Home extends Component {
                     className="img-fluid p-3"
                     alt=""
                   />
+                  <img
+                    src="/icons/postman.svg"
+                    width="120px"
+                    className="img-fluid p-3"
+                    alt=""
+                  />
                 </div>
                 <hr />
                 <h2 className="font-weight-bold">Statistics</h2>
@@ -206,16 +242,16 @@ export class Home extends Component {
                   <div className="d-flex flex-column justify-content-center align-items-center">
                     <div
                       className="rounded-circle border border-circle d-flex justify-content-center align-items-center"
-                      style={{ height: "160px", width: "160px" }}
+                      style={{ height: '160px', width: '160px' }}
                     >
-                      <h1 class=" font-weight-bold"> 1000+</h1>
+                      <h1 class=" font-weight-bold"> 2000+</h1>
                     </div>
                     <h4 className="font-weight-bold my-2">Coding Hours</h4>
                   </div>
                   <div className="d-flex flex-column justify-content-center align-items-center">
                     <div
                       className="border rounded-circle border-circle d-flex justify-content-center align-items-center"
-                      style={{ height: "160px", width: "160px" }}
+                      style={{ height: '160px', width: '160px' }}
                     >
                       <h1 class=" font-weight-bold">200+</h1>
                     </div>
@@ -224,18 +260,18 @@ export class Home extends Component {
                   <div className="d-flex flex-column justify-content-center align-items-center">
                     <div
                       className="border rounded-circle border-circle d-flex justify-content-center align-items-center"
-                      style={{ height: "160px", width: "160px" }}
+                      style={{ height: '160px', width: '160px' }}
                     >
-                      <h1 class=" font-weight-bold"> 500+</h1>
+                      <h1 class=" font-weight-bold"> 650+</h1>
                     </div>
                     <h4 className="font-weight-bold my-2">Github Commits</h4>
                   </div>
                   <div className="d-flex flex-column justify-content-center align-items-center">
                     <div
                       className="border rounded-circle border-circle d-flex justify-content-center align-items-center"
-                      style={{ height: "160px", width: "160px" }}
+                      style={{ height: '160px', width: '160px' }}
                     >
-                      <h1 class=" font-weight-bold"> 100+</h1>
+                      <h1 class=" font-weight-bold"> 200+</h1>
                     </div>
                     <h4 className="font-weight-bold my-2">
                       Hours Of soft Skills
