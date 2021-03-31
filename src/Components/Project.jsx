@@ -8,6 +8,38 @@ export class Project extends Component {
     this.state = {
       data: [
         {
+          name: 'Snake Game (Canvas)',
+          desc:
+            'Snake Game using Html, Css & Js',
+          img: '/project-demo/snake.png',
+          demoLink: 'https://fervent-varahamihira-bded16.netlify.app/',
+          codeLink:
+            'https://github.com/dipanshuraz/snake_game_dsa',
+          techstack: [
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+          ],
+        },
+        {
+          name: 'myReads-A-Book-Tracking-App (Udacity)',
+          desc:
+            'A react application to manage books library',
+          img: '/project-demo/myreads.png',
+          demoLink: 'https://boring-beaver-170e5e.netlify.app/',
+          codeLink:
+            'https://github.com/dipanshuraz/myReads-A-Book-Tracking-App',
+          techstack: [
+            '/icons/html-5.svg',
+            '/icons/css-3.svg',
+            '/icons/javascript.svg',
+            '/icons/react.svg',
+            '/icons/redux.svg',
+            '/icons/mongodb.svg',
+            '/icons/nodejs.svg',
+          ],
+        },
+        {
           name: 'Banks Search Application - kukuFM',
           desc:
             'There should be a dropdown for cities (just put in 5 cities in there) and there is a search bar. As I type in the search area, the table should be dynamically filtered (client-side filtering). Search should be across all fields.',

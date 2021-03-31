@@ -12,6 +12,24 @@ export class Achievements extends Component {
         <hr />
         <div className="row justify-content-center">
           <div className="col-md-10">
+
+          <div className="row my-5">
+              <div className="col-md-8">
+                <h4 className="font-weight-bold">
+                  <h6 className="font-weight-bold">March 2021 - Present</h6>
+                  <code>&gt;</code> Frontend Developer (ReactJS)
+                </h4>
+
+                <p className="lead font-weight-bold">
+                Creatella, Venture Builder | Startup Studio
+                  <br />
+                  Singapore (Remote)
+                </p>
+
+                <p className="lead"></p>
+              </div>
+            </div>
+
             <div className="row my-5">
               <div className="col-md-8">
                 <h4 className="font-weight-bold">
