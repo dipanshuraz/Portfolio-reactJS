@@ -69,7 +69,7 @@ export class Home extends Component {
               <div className='col-md-12 col-lg-4 my-2 py-md-3 w-100'>
                 <a
                   className='btn btn-block btn-outline-success bg-success border text-white p-3 w-100'
-                  href='https://docs.google.com/document/d/1WKQ5CUTb6LYZ27AuBrMX7S0yhFBRYizfe-Gf9Pchpgc/edit?usp=sharing'
+                  href='#'
                 >
                   <i class='far fa-file-alt'></i> Resume
                 </a>
