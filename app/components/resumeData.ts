@@ -27,6 +27,7 @@ export type ResumeData = {
     github: string;
   };
   highlights: string[];
+  strengths: string[];
   experience: ExperienceItem[];
   skills: {
     languages: string[];
@@ -34,6 +35,8 @@ export type ResumeData = {
     backend: string[];
     testing: string[];
     database: string[];
+    infra: string[];
+    product: string[];
     tools: string[];
   };
   certificates: string[];
