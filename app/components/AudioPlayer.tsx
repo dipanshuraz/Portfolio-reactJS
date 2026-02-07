@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(true);
+  const userPausedRef = useRef(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -24,9 +25,26 @@ export default function AudioPlayer() {
     };
     attemptAutoplay();
 
+    const resumeOnInteraction = async () => {
+      if (!audio || userPausedRef.current) return;
+      try {
+        await audio.play();
+        setIsPlaying(true);
+      } catch {
+        // ignore
+      }
+    };
+
+    document.addEventListener("pointerdown", resumeOnInteraction, { once: true });
+    document.addEventListener("keydown", resumeOnInteraction, { once: true });
+    document.addEventListener("touchstart", resumeOnInteraction, { once: true });
+
     return () => {
       audio.removeEventListener("play", onPlay);
       audio.removeEventListener("pause", onPause);
+      document.removeEventListener("pointerdown", resumeOnInteraction);
+      document.removeEventListener("keydown", resumeOnInteraction);
+      document.removeEventListener("touchstart", resumeOnInteraction);
     };
   }, []);
 
@@ -34,12 +52,14 @@ export default function AudioPlayer() {
     const audio = audioRef.current;
     if (!audio) return;
     if (audio.paused) {
+      userPausedRef.current = false;
       try {
         await audio.play();
       } catch {
         // Autoplay blocked; user can tap again.
       }
     } else {
+      userPausedRef.current = true;
       audio.pause();
     }
   };
@@ -66,7 +86,7 @@ export default function AudioPlayer() {
           </svg>
         )}
       </button>
-      <audio ref={audioRef} src="/music.mp3" loop />
+      <audio ref={audioRef} src="/music.mp3" loop autoPlay />
     </div>
   );
 }

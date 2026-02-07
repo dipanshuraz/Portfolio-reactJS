@@ -5,12 +5,18 @@ export type ExperienceItem = {
   summary: string;
   bullets: string[];
   stack: string;
+  url: string;
 };
 
 export type EducationItem = {
   school: string;
   degree: string;
   period: string;
+};
+
+export type CertificateItem = {
+  title: string;
+  url: string;
 };
 
 export type ResumeData = {
@@ -39,7 +45,7 @@ export type ResumeData = {
     product: string[];
     tools: string[];
   };
-  certificates: string[];
+  certificates: CertificateItem[];
   education: EducationItem[];
 };
 
@@ -72,8 +78,9 @@ export const resumeData: ResumeData = {
   experience: [
     {
       company: "August Digital, New York",
-      role: "Software Engineer II",
+      role: "Software Engineer",
       period: "Aug 2023 - Feb 2026",
+      url: "https://augustdigital.io/",
       summary:
         "Cloud governance platform to reduce AWS costs via anomaly detection and wastage insights.",
       bullets: [
@@ -88,6 +95,7 @@ export const resumeData: ResumeData = {
       company: "Braveno LTD, UK (Remote)",
       role: "Lead Software Engineer",
       period: "Nov 2021 - Aug 2023",
+      url: "https://braveno.com/",
       summary:
         "Exchange with provable full reserves via segmented wallets and decentralized settlement.",
       bullets: [
@@ -103,6 +111,7 @@ export const resumeData: ResumeData = {
       company: "Zensar Technologies, Bengaluru",
       role: "Software Developer",
       period: "Jun 2021 - Oct 2021",
+      url: "https://www.zensar.com/",
       summary: "Preventx remote sexual health testing platform for the UK.",
       bullets: [
         "Designed and developed a scalable customer platform, improving user satisfaction by 40%.",
@@ -115,6 +124,7 @@ export const resumeData: ResumeData = {
       company: "Edstem Technologies, Kochi",
       role: "Software Developer",
       period: "Jul 2020 - Jun 2021",
+      url: "https://www.edstem.com/",
       summary: "Warehowz on-demand warehousing platform for USA & Canada.",
       bullets: [
         "Spearheaded advanced reporting tools with PDF and Excel export.",
@@ -128,6 +138,7 @@ export const resumeData: ResumeData = {
       company: "Masai School, Bengaluru",
       role: "Full Stack Engineer",
       period: "Oct 2019 - Oct 2020",
+      url: "https://www.masaischool.com/",
       summary: "Bootcamp mentor and platform contributor.",
       bullets: [
         "Mentored students weekly through coding challenges and mock interviews.",
@@ -139,6 +150,7 @@ export const resumeData: ResumeData = {
       company: "Kuku FM, Mumbai",
       role: "Frontend Developer Intern",
       period: "May 2020 - Jul 2020",
+      url: "https://kukufm.com/",
       summary: "India's leading audio platform for audiobooks and podcasts.",
       bullets: [
         "Increased user engagement by 30% with UI redesigns.",
@@ -149,10 +161,10 @@ export const resumeData: ResumeData = {
     }
   ],
   skills: {
-    languages: ["JavaScript", "Solidity"],
+    languages: ["JavaScript (ES6+)", "TypeScript", "Solidity"],
     frontend: [
-      "React",
-      "Next.js",
+      "ReactJS",
+      "NextJS",
       "Material UI",
       "Tailwind",
       "Ethers.js",
@@ -161,28 +173,38 @@ export const resumeData: ResumeData = {
       "React Query",
       "Redux"
     ],
-    backend: ["Node.js", "Express.js"],
-    testing: ["Jest", "Playwright", "React Testing Library", "Mock Server", "Hardhat"],
+    backend: ["Node.js", "Express.js", "REST APIs", "Microservices", "WebSockets"],
+    testing: ["Jest", "React Testing Library", "Mock Server", "Hardhat", "Playwright"],
     database: ["MongoDB", "SQL"],
-    infra: ["Docker", "AWS", "Azure", "GitHub Actions"],
-    product: ["Jira", "draw.io", "Confluence", "Notion"],
-    tools: [
-      "Figma",
-      "Trello",
-      "DigitalOcean",
-      "Heroku",
-      "Git",
-      "Slack",
-      "Teams",
-      "VSCode",
-      "JIRA",
-      "Notion"
-    ]
+    infra: ["AWS", "Docker", "GitHub Actions", "CI/CD Pipelines"],
+    product: ["Claude AI", "Cursor", "Jira", "Confluence", "Notion", "Draw.io", "Git"],
+    tools: ["Ethers.js", "Wallet Integrations", "Smart Contract Interaction", "DeFi Frontends"]
   },
   certificates: [
-    "React Developer Nanodegree",
-    "Front End Web Developer Nanodegree",
-    "Microsoft Exam 480: Programming in HTML5 with JavaScript and CSS3 (G911-7855)"
+    {
+      title: "Microsoft EXAM 480: Programming in HTML5 with JavaScript and CSS3 (G911-7855)",
+      url: "https://www.youracclaim.com/badges/48db5f6d-a346-4291-ad39-9a504250c692/linked_in_profile"
+    },
+    {
+      title: "React Developer Nanodegree",
+      url: "https://drive.google.com/file/d/1rqLyhOeSkQ40oB35JDaL0U4c83VyMOWV/view?usp=drive_link"
+    },
+    {
+      title: "Front End Web Developer Nanodegree",
+      url: "https://drive.google.com/file/d/1rqLyhOeSkQ40oB35JDaL0U4c83VyMOWV/view?usp=drive_link"
+    },
+    {
+      title: "Android Developer Nanodegree",
+      url: "https://drive.google.com/file/d/1VHOBWugnqTLSWIxkrl2byymUkg5Gdhpb/view?usp=sharing"
+    },
+    {
+      title: "Blockchain Developer Nanodegree",
+      url: "https://drive.google.com/file/d/1bnaP6kMem1jXd3g77_nV3nhw_XYkD2GF/view?usp=sharing"
+    },
+    {
+      title: "Scientific Computing & Python for Data Science (WQU)",
+      url: "https://wqu.thedataincubator.com/certificate/6015360742457344"
+    }
   ],
   education: [
     {

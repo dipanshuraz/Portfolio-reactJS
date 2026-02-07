@@ -10,13 +10,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-three/drei": "latest",
-    "@react-three/fiber": "latest",
-    "gsap": "latest",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "three": "latest"
+    "@react-three/drei": "9.105.3",
+    "@react-three/fiber": "8.16.8",
+    "@react-three/rapier": "1.5.0",
+    "gsap": "3.12.5",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "0.165.0"
   },
   "devDependencies": {
     "@types/node": "25.2.0",

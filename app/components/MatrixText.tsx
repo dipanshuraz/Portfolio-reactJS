@@ -8,7 +8,6 @@ const GLYPHS =
 const DEFAULT_PHRASES = [
   "α · Α · a",
   "β · Β · b",
-  "γ · Γ · g",
   "δ · Δ · d",
   "λ · Λ · l",
   "σ · Σ · s",

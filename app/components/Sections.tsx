@@ -3,16 +3,22 @@
 import { resumeData } from "./resumeData";
 import { useEffect, useMemo, useState } from "react";
 import MatrixText from "./MatrixText";
+import SkillsCloud from "./SkillsCloud";
 
 const navItems = [
   { id: "home", label: "Home", jp: "ホーム" },
-  { id: "awards", label: "Achievements", jp: "実績" },
-  { id: "highlights", label: "Highlights", jp: "要約" },
   { id: "experience", label: "Experience", jp: "経験" },
   { id: "skills", label: "Skills", jp: "技能" },
   { id: "certs", label: "Certificates", jp: "資格" },
-  { id: "education", label: "Education", jp: "学歴" }
+  { id: "education", label: "Education", jp: "学歴" },
+  { id: "contact", label: "Contact", jp: "連絡" }
 ];
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 
 export default function Sections() {
   const [activeId, setActiveId] = useState("home");
@@ -59,7 +65,7 @@ export default function Sections() {
           }
         });
       },
-      { threshold: 0.55 }
+      { threshold: 0, rootMargin: "-40% 0px -40% 0px" }
     );
 
     sections.forEach((el) => observer.observe(el));
@@ -82,32 +88,6 @@ export default function Sections() {
     };
   }, []);
 
-  useEffect(() => {
-    const section = document.getElementById("skills");
-    if (!section) return;
-    const track = section.querySelector<HTMLElement>(".skills-scroll");
-    if (!track) return;
-
-    const onWheel = (event: WheelEvent) => {
-      const rect = section.getBoundingClientRect();
-      const inView =
-        rect.top <= window.innerHeight * 0.2 &&
-        rect.bottom >= window.innerHeight * 0.8;
-      if (!inView) return;
-
-      const max = track.scrollWidth - track.clientWidth;
-      if (max <= 0) return;
-
-      const next = Math.min(max, Math.max(0, track.scrollLeft + event.deltaY));
-      if (next !== track.scrollLeft) {
-        track.scrollLeft = next;
-        event.preventDefault();
-      }
-    };
-
-    section.addEventListener("wheel", onWheel, { passive: false });
-    return () => section.removeEventListener("wheel", onWheel);
-  }, []);
 
   return (
     <div className="overlay">
@@ -172,14 +152,20 @@ export default function Sections() {
           <span className="jp-text">{activeMeta.jp}</span>
           <span className="index">{activeMeta.label.toUpperCase()}</span>
         </div>
-        <section className="hero" data-section data-section-id="home" id="home">
+        <section
+          className={`hero screen-section ${activeId === "home" ? "is-active" : ""}`}
+          data-section
+          data-section-id="home"
+          id="home"
+        >
           <div className="hero-meta">
             <span>100% LOADED</span>
             <span className="jp-text">深度 · WEB3 / FULL-STACK</span>
           </div>
           <div className="hero-title">
             <div className="hero-title-row">
-              <svg className="flag-3d" viewBox="0 0 48 24" role="img" aria-label="India flag">
+             <div className="hero-flag">
+               <svg className="flag-3d" viewBox="0 0 48 24" role="img" aria-label="India flag">
                 <defs>
                   <linearGradient id="flagShade" x1="0" y1="0" x2="1" y2="0">
                     <stop offset="0%" stopColor="rgba(255,255,255,0.05)" />
@@ -200,6 +186,7 @@ export default function Sections() {
                 </g>
                 <circle cx="24" cy="12" r="11.5" fill="none" stroke="#0b0b0b" strokeWidth="1" />
               </svg>
+             </div>
               <MatrixText
                 className="matrix-title"
                 phrases={["Deepanshu Prajapati", "दीपांशु प्रजापति", "ディーパンシュ・プラジャパティ"]}
@@ -209,12 +196,49 @@ export default function Sections() {
           </div>
           <p className="hero-copy">{resumeData.summary}</p>
           <div className="jp-text jp-subtle">挑戦 · DESIGN · ENGINEERING</div>
-          <MatrixText />
+          <div className="hero-social">
+            <a
+              className="social-link"
+              href="https://www.linkedin.com/in/codersadhu/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.48 1s2.5 1.12 2.5 2.5ZM.3 8.1h4.4V23H.3V8.1Zm7.4 0h4.2v2h.1c.6-1.1 2.1-2.2 4.3-2.2 4.6 0 5.4 3 5.4 6.9V23h-4.4v-6.6c0-1.6 0-3.6-2.2-3.6s-2.6 1.7-2.6 3.5V23H7.7V8.1Z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              className="social-link"
+              href="https://github.com/dipanshuraz/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.5 0 12.3c0 5.4 3.44 9.98 8.2 11.6.6.12.82-.27.82-.6 0-.3-.01-1.1-.02-2.2-3.34.75-4.04-1.66-4.04-1.66-.54-1.42-1.32-1.8-1.32-1.8-1.08-.76.08-.75.08-.75 1.2.09 1.83 1.27 1.83 1.27 1.06 1.87 2.78 1.33 3.46 1.02.11-.8.41-1.33.74-1.63-2.66-.31-5.46-1.36-5.46-6.03 0-1.33.46-2.42 1.23-3.27-.12-.31-.53-1.56.12-3.25 0 0 1-.33 3.3 1.25a11.2 11.2 0 0 1 6 0C17.7 5.42 18.7 5.75 18.7 5.75c.65 1.69.24 2.94.12 3.25.76.85 1.23 1.94 1.23 3.27 0 4.68-2.8 5.71-5.48 6.02.42.37.8 1.1.8 2.22 0 1.6-.01 2.9-.01 3.3 0 .34.22.73.83.6 4.75-1.63 8.19-6.2 8.19-11.6C24 5.5 18.63 0 12 0Z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
           <div className="cta-row">
-            <a className="btn primary" href={`mailto:${resumeData.email}`}>
+            <a
+              className="btn primary"
+              href={`mailto:${resumeData.email}?subject=${encodeURIComponent(
+                "Project Inquiry — [Your Company/Project]"
+              )}&body=${encodeURIComponent(
+                "Hi Deepanshu,\n\nI’m [Your Name] from [Company]. We’re looking for help with [Project/Role].\n\nDetails:\n- Project overview:\n- Timeline:\n- Budget range:\n- Tech stack:\n\nAttachments:\n- [Attach brief / spec / deck]\n\nBest,\n[Your Name]\n[Title]\n[Phone / LinkedIn]"
+              )}`}
+            >
               Start a conversation
             </a>
-          <a className="btn secondary" href="/Deepanshu_Resume.pdf" download>
+          <a
+            className="btn secondary"
+            href="https://docs.google.com/document/d/1qaDXb4MWGePlOtO8lg-ZIKgzzFgJyDKHnIBgaiehkCU/edit?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
             Download Resume
           </a>
           </div>
@@ -225,67 +249,40 @@ export default function Sections() {
           </div>
         </section>
 
-        <section className="section-card awards" id="awards" data-section data-section-id="awards">
+        <section
+          className={`section-card screen-section ${activeId === "experience" ? "is-active" : ""}`}
+          id="experience"
+          data-section
+          data-section-id="experience"
+        >
           <div className="section-head">
-            <span className="index">2. RECOGNITION</span>
-            <span className="tag">Awards</span>
-          </div>
-          <div className="award-grid">
-            <div>
-              <h3>Proof of Impact</h3>
-              <p>
-                Reduced AWS costs by 20%-50%, scaled trading infrastructure, and delivered analytics
-                platforms with measurable engagement lifts.
-              </p>
-            </div>
-            <div className="award-list">
-              {resumeData.highlights.map((item) => (
-                <div key={item}>{item}</div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section-card" id="highlights" data-section data-section-id="highlights">
-          <div className="section-head">
-            <span className="index">3. HIGHLIGHTS</span>
-            <span className="tag">Impact</span>
-          </div>
-          <h2>Highlights</h2>
-          <div className="grid">
-            {resumeData.highlights.map((item) => (
-              <div key={item} className="timeline-node is-left is-visible">
-                {item}
-              </div>
-            ))}
-          </div>
-          <div className="section-head" style={{ marginTop: 36 }}>
-            <span className="index">3.1 STRENGTHS</span>
-            <span className="tag">Strengths</span>
-          </div>
-          <div className="grid">
-            {resumeData.strengths.map((item) => (
-              <div key={item} className="timeline-node is-left is-visible">
-                {item}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="section-card" id="experience" data-section data-section-id="experience">
-          <div className="section-head">
-            <span className="index">4. EXPERIENCE</span>
+            <span className="index">2. EXPERIENCE</span>
             <span className="tag">Experience</span>
           </div>
           <h2>6+ Years of Product Delivery</h2>
+          <div className="project-links">
+            <span className="project-links__label">Projects</span>
+            {resumeData.experience.slice(0, 4).map((role) => (
+              <a key={role.company} className="project-link" href={`#exp-${slugify(role.company)}`}>
+                {role.company}
+              </a>
+            ))}
+          </div>
           <div className="timeline-rail">
             {resumeData.experience.map((role, index) => (
-              <div key={role.company} className={`timeline-node ${index % 2 ? "is-right" : "is-left"}`}>
+              <div
+                key={role.company}
+                id={`exp-${slugify(role.company)}`}
+                className={`timeline-node ${index % 2 ? "is-right" : "is-left"}`}
+              >
                 <div className="timeline-date">{role.period}</div>
                 <div className="timeline-dot" aria-hidden />
                 <div className="timeline-card">
                   <h3>
-                    {role.role} · {role.company}
+                    {role.role} ·{" "}
+                    <a className="experience-link" href={role.url} target="_blank" rel="noreferrer">
+                      {role.company}
+                    </a>
                   </h3>
                   <p>{role.summary}</p>
                   <ul>
@@ -298,142 +295,57 @@ export default function Sections() {
               </div>
             ))}
           </div>
-          <div className="section-head" style={{ marginTop: 40 }}>
-            <span className="index">4.1 PROJECTS</span>
-            <span className="tag">Platforms & Products</span>
+        </section>
+
+        <section
+          className={`section-card screen-section ${activeId === "skills" ? "is-active" : ""}`}
+          id="skills"
+          data-section
+          data-section-id="skills"
+        >
+          <div className="section-head">
+            <span className="index">3. SKILLS</span>
+            <span className="tag">Skills</span>
           </div>
-          <div className="project-list">
-            {resumeData.experience.slice(0, 4).map((role, index) => (
-              <div key={role.company} className="project-row">
-                <div className="project-index">{String(index + 1).padStart(2, "0")}</div>
-                <div className="project-content">
-                  <h3>{role.company}</h3>
-                  <p>{role.summary}</p>
-                  <span className="project-meta">{role.stack}</span>
-                </div>
-                <a className="btn ghost" href="#experience">
-                  View
+          <SkillsCloud />
+        </section>
+
+        <section
+          className={`section-card screen-section ${activeId === "certs" ? "is-active" : ""}`}
+          id="certs"
+          data-section
+          data-section-id="certs"
+        >
+          <div className="section-head">
+            <span className="index">4. CREDENTIALS</span>
+            <span className="tag">Credentials</span>
+          </div>
+          <h2>Certificates</h2>
+          <div className="timeline certs-list">
+            {resumeData.certificates.map((cert) => (
+              <div key={cert.title} className="timeline-node is-left">
+                <a className="experience-link" href={cert.url} target="_blank" rel="noreferrer">
+                  {cert.title}
                 </a>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="section-card" id="skills" data-section data-section-id="skills">
+        <section
+          className={`section-card screen-section ${activeId === "education" ? "is-active" : ""}`}
+          id="education"
+          data-section
+          data-section-id="education"
+        >
           <div className="section-head">
-            <span className="index">5. SKILLS</span>
-            <span className="tag">Skills</span>
-          </div>
-          <h2>Tooling and Platforms</h2>
-          <div className="skills-scroll">
-            <div className="skills-panel">
-              <h3>Languages</h3>
-              <div className="skills">
-                {resumeData.skills.languages.map((skill) => (
-                  <span key={skill} className="skill-pill">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="skills-panel">
-              <h3>Frontend</h3>
-              <div className="skills">
-                {resumeData.skills.frontend.map((skill) => (
-                  <span key={skill} className="skill-pill">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="skills-panel">
-              <h3>Backend</h3>
-              <div className="skills">
-                {resumeData.skills.backend.map((skill) => (
-                  <span key={skill} className="skill-pill">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="skills-panel">
-              <h3>Testing</h3>
-              <div className="skills">
-                {resumeData.skills.testing.map((skill) => (
-                  <span key={skill} className="skill-pill">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="skills-panel">
-              <h3>Databases</h3>
-              <div className="skills">
-                {resumeData.skills.database.map((skill) => (
-                  <span key={skill} className="skill-pill">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="skills-panel">
-              <h3>Infrastructure</h3>
-              <div className="skills">
-                {resumeData.skills.infra.map((skill) => (
-                  <span key={skill} className="skill-pill">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="skills-panel">
-              <h3>Product Management</h3>
-              <div className="skills">
-                {resumeData.skills.product.map((skill) => (
-                  <span key={skill} className="skill-pill">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="skills-panel">
-              <h3>Tools</h3>
-              <div className="skills">
-                {resumeData.skills.tools.map((skill) => (
-                  <span key={skill} className="skill-pill">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-        <section className="section-card" id="certs" data-section data-section-id="certs">
-          <div className="section-head">
-            <span className="index">6. CREDENTIALS</span>
-            <span className="tag">Credentials</span>
-          </div>
-          <h2>Certificates</h2>
-          <div className="timeline">
-            {resumeData.certificates.map((cert) => (
-              <div key={cert} className="timeline-node is-left">
-                {cert}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="section-card" id="education" data-section data-section-id="education">
-          <div className="section-head">
-            <span className="index">7. EDUCATION</span>
+            <span className="index">5. EDUCATION</span>
             <span className="tag">Education</span>
           </div>
           <h2>Academic Foundation</h2>
           <div className="timeline-rail">
             {resumeData.education.map((edu, index) => (
               <div key={edu.school} className={`timeline-node ${index % 2 ? "is-right" : "is-left"}`}>
-                <div className="timeline-date">{edu.period}</div>
                 <div className="timeline-dot" aria-hidden />
                 <div className="timeline-card">
                   <h3>{edu.degree}</h3>
@@ -444,7 +356,12 @@ export default function Sections() {
           </div>
         </section>
 
-        <section className="footer" data-section>
+        <section
+          className={`footer screen-section ${activeId === "contact" ? "is-active" : ""}`}
+          data-section
+          data-section-id="contact"
+          id="contact"
+        >
           <p>
             Available for high-impact Web3, platform, and analytics work. Reach out at{" "}
             <strong>{resumeData.email}</strong>
