@@ -208,11 +208,6 @@ export const resumeData: ResumeData = {
   ],
   education: [
     {
-      school: "Harcourt Butler Technical University, Kanpur",
-      degree: "Master of Computer Applications",
-      period: "Oct 2022 - Oct 2024"
-    },
-    {
       school: "Mangalayatan University, Aligarh",
       degree: "Master of Computer Applications",
       period: "Oct 2022 - Oct 2024"
