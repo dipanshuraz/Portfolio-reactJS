@@ -17,6 +17,7 @@ export default function SkillsCloud() {
     { label: "Frontend & UI Engineering", items: resumeData.skills.frontend },
     { label: "Backend & APIs", items: resumeData.skills.backend },
     { label: "Web3 & Blockchain", items: resumeData.skills.tools },
+    { label: "Data / AI", items: resumeData.skills.dataAi },
     { label: "Testing", items: resumeData.skills.testing },
     { label: "Database", items: resumeData.skills.database },
     { label: "Cloud & DevOps", items: resumeData.skills.infra },

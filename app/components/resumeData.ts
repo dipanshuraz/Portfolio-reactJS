@@ -44,6 +44,7 @@ export type ResumeData = {
     infra: string[];
     product: string[];
     tools: string[];
+    dataAi: string[];
   };
   certificates: CertificateItem[];
   education: EducationItem[];
@@ -52,9 +53,9 @@ export type ResumeData = {
 export const resumeData: ResumeData = {
   name: "Deepanshu Prajapati",
   nameJP: "ディーパンシュ・プラジャパティ",
-  title: "Web3 Full-Stack Engineer",
+  title: "Senior Full Stack Engineer · Design Systems · Scalable Architecture · Blockchain",
   summary:
-    "Full-stack engineer with 6+ years of experience building cloud and Web3 products across distributed teams in the US, Europe, and Australia. Strong in cloud infrastructure (AWS, Azure, DevOps), asynchronous collaboration, and translating product goals into scalable engineering outcomes.",
+    "Full-stack engineer with experience building high-scale, multi-service platforms using Next.js, TypeScript, and Node.js. Distributed systems handling high-throughput workloads, real-time data, and complex role-based access patterns, with a focus on performance and scalability.",
   location: "Bengaluru, India",
   email: "dipanshuraz2@gmail.com",
   phone: "+91 8299379285",
@@ -64,10 +65,10 @@ export const resumeData: ResumeData = {
     github: "Github"
   },
   highlights: [
-    "Reduced AWS costs by 20%-50% through anomaly detection and resource optimization.",
-    "Led a frontend team and delivered a server-driven UI architecture for scalability.",
-    "Re-architected a trading platform and built micro-frontend modules for wallets and exchange.",
-    "Shipped analytics-driven customer platforms with measurable engagement gains."
+    "Built Upshift from scratch (Next.js): 0→200 institutional users, $400M+ TVL, 50+ vaults.",
+    "Led frontend architecture for institutional DeFi and CeFi workflows at August Digital.",
+    "Designed server-driven UI and micro-frontends for Braveno / FreeStreet trading platforms.",
+    "Improved customer satisfaction ~40% on a MERN health platform at Zensar."
   ],
   strengths: [
     "Takes initiative: proactively owns new challenges and drives results.",
@@ -78,107 +79,126 @@ export const resumeData: ResumeData = {
   experience: [
     {
       company: "August Digital, New York",
-      role: "Software Engineer",
-      period: "Aug 2023 - Feb 2026",
+      role: "Software Engineer (Remote, US Timezone)",
+      period: "Aug 2023 - Jan 2026",
       url: "https://augustdigital.io/",
       summary:
-        "Cloud governance platform to reduce AWS costs via anomaly detection and wastage insights.",
+        "Institutional DeFi infrastructure powering Upshift and the August Platform — secure vault management, lending, collateralization, and asset optimization.",
       bullets: [
-        "Reduced AWS costs by 20%-50% through anomaly detection and resource optimization.",
-        "Built a custom UI library, charts, and grids to enhance usability.",
-        "Led the frontend team and designed a server-driven UI architecture to improve scalability.",
-        "Developed customer and admin dashboards for cloud expense management."
+        "Built Upshift from scratch using Next.js, scaling from 0 to 200 institutional users and supporting $400M+ TVL across 50+ vaults.",
+        "Revamped the August Platform: loans, collateral management, vault deployment, swaps, and multi-tenancy.",
+        "Built frontend contract interaction layers and abstraction workflows so users can run complex on-chain strategies through clear UX.",
+        "Led frontend architecture and delivery for institutional DeFi and CeFi workflows — performance, scalability, and production reliability.",
+        "Built a scalable design system and UI library: architecture, patterns, and standards for consistency and velocity across teams."
       ],
-      stack: "AWS, Next.js, Tailwind, Express.js, React Query, Material UI, Charts"
+      stack:
+        "Next.js, TypeScript, Express.js, Ethers.js, Wallet Integrations, AWS, GitHub Actions, CI/CD, Analytics, Monitoring"
     },
     {
-      company: "Braveno LTD, UK (Remote)",
-      role: "Lead Software Engineer",
+      company: "Braveno LTD, UK",
+      role: "Lead Software Engineer (Remote, UK Timezone)",
       period: "Nov 2021 - Aug 2023",
       url: "https://braveno.com/",
       summary:
-        "Exchange with provable full reserves via segmented wallets and decentralized settlement.",
+        "Braveno and FreeStreet — institutional trading platforms with exchange, wallet, and analytics for digital assets.",
       bullets: [
-        "Led development of Braveno and FreeStreet platforms.",
-        "Re-architected the trading platform to improve performance and reliability.",
-        "Built micro-frontend architecture for wallet, exchange, admin, and auth modules.",
-        "Developed SDKs, customizable themes, and advanced analytics for clients.",
-        "Engineered backend services for admin and authentication modules."
+        "Led development of institutional trading platforms on Next.js with Node.js and Express-based microservices.",
+        "Designed and implemented server-driven UI for dynamic, configuration-driven workflows.",
+        "Built and maintained backend microservices (Node.js, Express) for authentication, admin, and orchestration.",
+        "Re-architected the trading system for performance, fault tolerance, and scalability under high load.",
+        "Micro-frontend architecture for wallet, exchange, admin, and authentication; SDKs and analytics dashboards."
       ],
-      stack: "Ethers.js, React, Next.js, Socket.IO, Tailwind, Express.js, MongoDB"
+      stack: "Next.js, TypeScript, Ethers.js, Express.js, WebSockets, GitHub Actions, CI/CD"
     },
     {
-      company: "Zensar Technologies, Bengaluru",
-      role: "Software Developer",
+      company: "Zensar Technologies, Bengaluru, India",
+      role: "Software Developer (Onsite)",
       period: "Jun 2021 - Oct 2021",
       url: "https://www.zensar.com/",
-      summary: "Preventx remote sexual health testing platform for the UK.",
+      summary:
+        "Preventxis — scalable digital health platform for secure, confidential remote sexual health testing across the UK.",
       bullets: [
-        "Designed and developed a scalable customer platform, improving user satisfaction by 40%.",
-        "Conducted analytics to identify user behavior trends.",
-        "Established a triage system to improve customer support workflows."
+        "Full-stack features on Node.js and Express services integrated with frontend apps.",
+        "RESTful APIs and backend workflows with microservice-style separation of concerns.",
+        "MERN customer platform; ~40% user satisfaction improvement via UX and performance work.",
+        "Responsive UI and SQL-backed analytics; triage and workflow systems for operations."
       ],
-      stack: "React, Tailwind, Sass"
+      stack: "MongoDB, SQL, Express.js, React.js, Node.js, Tailwind CSS"
     },
     {
-      company: "Edstem Technologies, Kochi",
-      role: "Software Developer",
+      company: "Edstem Technologies, Kochi, India",
+      role: "Software Developer (Remote)",
       period: "Jul 2020 - Jun 2021",
       url: "https://www.edstem.com/",
-      summary: "Warehowz on-demand warehousing platform for USA & Canada.",
+      summary:
+        "Warehowz — on-demand warehousing for businesses in the USA and Canada to discover, manage, and optimize storage and logistics.",
       bullets: [
-        "Spearheaded advanced reporting tools with PDF and Excel export.",
-        "Built a ticketing system reducing issue resolution time by 25%.",
-        "Implemented custom analytics tools for event tracking and success goals.",
-        "Delivered manager action logs and invoice tracking dashboards."
+        "Advanced reporting with PDF and Excel exports for operational insights.",
+        "Real-time ticketing with WebSockets, cutting resolution time by ~25%.",
+        "Custom analytics, operational logging, and a platform built from scratch."
       ],
-      stack: "HTML, CSS, JavaScript, Socket.IO, Bootstrap, Node.js, Express.js, MongoDB"
+      stack: "Node.js, Express.js, MongoDB, Socket.IO, Docker"
     },
     {
-      company: "Masai School, Bengaluru",
-      role: "Full Stack Engineer",
+      company: "Masai School, Bengaluru, India",
+      role: "Full Stack Engineer / Mentor (Remote)",
       period: "Oct 2019 - Oct 2020",
       url: "https://www.masaischool.com/",
-      summary: "Bootcamp mentor and platform contributor.",
+      summary:
+        "Masai School — full-stack, web, and AI/ML bootcamp training tech aspirants in Bengaluru.",
       bullets: [
-        "Mentored students weekly through coding challenges and mock interviews.",
-        "Provided targeted feedback to improve interview outcomes."
+        "Mentored 100+ students in full-stack web development, data structures, and systems fundamentals.",
+        "Mock interviews, code reviews, and guidance on production-ready frontend and backend projects."
       ],
-      stack: "HTML, CSS, JavaScript, React, Redux, Node.js"
+      stack: "JavaScript, Next.js, Node.js, Data Structures & Algorithms"
     },
     {
-      company: "Kuku FM, Mumbai",
-      role: "Frontend Developer Intern",
+      company: "Kuku FM, Mumbai, India",
+      role: "Frontend Developer Intern (Remote)",
       period: "May 2020 - Jul 2020",
       url: "https://kukufm.com/",
-      summary: "India's leading audio platform for audiobooks and podcasts.",
+      summary:
+        "India's leading audio platform for audiobooks, stories, podcasts, news, and courses across genres and languages.",
       bullets: [
-        "Increased user engagement by 30% with UI redesigns.",
-        "Partnered with the CTO on strategic improvements for the dev team.",
-        "Implemented new features to boost platform retention."
+        "~30% engagement lift through UI redesign and UX improvements.",
+        "Shipped features for content discovery, playback, and retention with the CTO and design team."
       ],
-      stack: "React, Next.js, Tailwind, Redux, Audio API"
+      stack: "Next.js, Tailwind CSS, Redux, Audio APIs"
     }
   ],
   skills: {
-    languages: ["JavaScript (ES6+)", "TypeScript", "Solidity"],
+    languages: ["JavaScript", "TypeScript", "Python", "Solidity"],
     frontend: [
-      "ReactJS",
-      "NextJS",
+      "React.js",
+      "Next.js",
       "Material UI",
       "Tailwind",
-      "Ethers.js",
       "D3.js",
       "Highcharts",
       "React Query",
       "Redux"
     ],
-    backend: ["Node.js", "Express.js", "REST APIs", "Microservices", "WebSockets"],
-    testing: ["Jest", "React Testing Library", "Mock Server", "Hardhat", "Playwright"],
-    database: ["MongoDB", "SQL"],
+    backend: [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "GraphQL",
+      "Microservices",
+      "WebSockets",
+      "Prisma",
+      "Redis"
+    ],
+    testing: ["Jest", "React Testing Library", "Playwright", "API Mocking"],
+    database: ["MongoDB", "PostgreSQL"],
     infra: ["AWS", "Docker", "GitHub Actions", "CI/CD Pipelines"],
-    product: ["Claude AI", "Cursor", "Jira", "Confluence", "Notion", "Draw.io", "Git"],
-    tools: ["Ethers.js", "Wallet Integrations", "Smart Contract Interaction", "DeFi Frontends"]
+    product: ["Claude AI", "Cursor", "Jira", "Confluence", "Notion", "Draw.io", "Git", "Agents", "MCP"],
+    tools: [
+      "Ethers.js",
+      "Wallet Integration",
+      "Smart Contract Integration",
+      "DeFi Frontends"
+    ],
+    dataAi: ["Python (APIs, scripting)", "Automation", "GenAI workflows"]
   },
   certificates: [
     {
@@ -209,13 +229,13 @@ export const resumeData: ResumeData = {
   education: [
     {
       school: "Mangalayatan University, Aligarh",
-      degree: "Master of Computer Applications",
-      period: "Oct 2022 - Oct 2024"
+      degree: "MCA — Computer Applications",
+      period: ""
     },
     {
       school: "Integral University, Lucknow",
-      degree: "BCA",
-      period: "Jan 2017 - Jan 2020"
+      degree: "BCA — Computer Applications",
+      period: ""
     }
   ]
 };
