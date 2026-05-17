@@ -235,7 +235,7 @@ export default function Sections() {
             </a>
           <a
             className="btn secondary"
-            href="https://docs.google.com/document/d/1pSO5wTCPsW5ot4SgCLUN29T4Aj7fSIVHC-OyTJSl-aQ/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1sCJONquj3QGQUZQT2mFVVbZh1YJuKFuFygVfIlr3IwM/edit?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
